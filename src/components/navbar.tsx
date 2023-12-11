@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ShoppingBadge } from "../assets/shoppingBadge.tsx";
 import { Loupe } from "../assets/loupe.tsx";
 
 export function Navbar() {
   const [emptyCart, setEmptyCart] = useState(true);
-  const itemCount = 3; // Você deve definir dinamicamente o número de itens no carrinho
+  useEffect(() => {
+    setEmptyCart(true);
+
+  }, [])
+  const itemCount = 3;
 
   return (
     <>
@@ -19,7 +23,7 @@ export function Navbar() {
           <div className="relative h-[42px] w-full lg:w-[352px] bg-[#F3F5F6] flex items-center p-5 rounded-md">
             <input
               type="text"
-              className="h-[42px] w-full lg:w-[352px] bg-[#F3F5F6] focus:outline-none"
+              className="font-light h-[42px] w-full lg:w-[352px] bg-[#F3F5F6] focus:outline-none"
               placeholder="Procurando por algo específico?"
             />
             <button>

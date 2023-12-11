@@ -1,4 +1,4 @@
-export interface Products {
+export interface CardProps {
     data: Data;
 }
 
@@ -14,4 +14,3 @@ export interface AllProduct {
     image_url:      string;
     category:       string;
 }
-

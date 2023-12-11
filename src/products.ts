@@ -1,6 +1,6 @@
-import { Products } from "./model/productsModel";
+import { CardProps } from "./model/productsModel";
 
-export const products: Products = {
+export const products: CardProps = {
     "data": {
         "allProducts": [
             {
